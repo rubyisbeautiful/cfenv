@@ -1,2 +1,2 @@
-require "bundler/gem_tasks"
-
+require 'bundler/gem_tasks'
+import './lib/tasks/tests.rake'

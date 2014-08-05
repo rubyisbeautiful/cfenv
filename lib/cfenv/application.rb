@@ -5,8 +5,7 @@ module Cfenv
     WHITELISTED_SYMBOLS = %i(
       application_users users
       instance_id instance_index
-      application_version version
-      application_name name
+      application_version application_name
       application uris
       started_at start started_at_timestamp
       host port limits
@@ -33,14 +32,13 @@ module Cfenv
     alias_method :method_missing, :method_missing_with_whitelisted_symbol_check
 
 
-    # def users
-    #   vcap_application.users
-    # end
-    #
-    #
-    # def limits
-    #   vcap_application.limits
-    # end
+    def vcap_name
+      vcap_application.name || vcap_application.application_name
+    end
+
+    def vcap_version
+      vcap_application.version || vcap_application.application_version
+    end
 
   end
 
