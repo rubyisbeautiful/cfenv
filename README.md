@@ -1,4 +1,4 @@
-# Cfenv
+# cfenv [![Build Status](https://travis-ci.org/rubyisbeautiful/cfenv.png)](https://travis-ci.org/rubyisbeautiful/cfenv) [![Code Climate](https://codeclimate.com/github/rubyisbeautiful/cfenv.png)](https://codeclimate.com/github/rubyisbeautiful/cfenv)
 
 TODO: Write a gem description
 
@@ -18,7 +18,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+if Cfenv.vcap?
+    redis_creds = Cfenv.services('redis').credentials
+end
+# etc
+```
 
 ## Contributing
 
