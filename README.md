@@ -18,7 +18,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+if Cfenv.vcap?
+    redis_creds = Cfenv.services('redis').credentials
+end
+# etc
+```
 
 ## Contributing
 
